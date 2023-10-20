@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Things to Know about Justin</title>
+    <link href="style.css" rel="stylesheet">
+    <script>
+        function toggleList() {
+            var ul = document.querySelector('ul');
+            ul.style.display = ul.style.display === 'none' ? 'block' : 'none';
+        }
+
+        function startGame() {
+            var secretNumber = Math.floor(Math.random() * 100) + 1;
+            var attempts = 0;
+
+            while (true) {
+                var guess = parseInt(prompt("Guess the number (1-100):"));
+                attempts++;
+
+                if (guess === secretNumber) {
+                    alert("Congratulations! You guessed the number in " + attempts + " attempts.");
+                    break;
+                } else if (guess < secretNumber) {
+                    alert("Try a higher number.");
+                } else {
+                    alert("Try a lower number.");
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Things to Know about Justin</h1>
+    <hr>
+    <p>I am an individual with a multifaceted interest in technology, particularly drawn to the world of software and computer specifications. I find joy in exploring the intricate details of various software applications, understanding the nuances of computer hardware, and their impact on my digital experiences. Alongside my tech-savvy side, I have a passion for video games, relishing the immersive virtual worlds and challenging gameplay they provide. In contrast to my tech-driven pursuits, I also have a strong affinity for swimming, enjoying the tranquility of the water and the physical well-being it offers. My unique blend of technological curiosity and active interests showcases a well-rounded and dynamic approach to life, embracing both the digital and physical domains with enthusiasm.</p>
+
+    <button onclick="toggleList()">Toggle List</button>
+    <hr>
+    <ul>
+        <li><a href="https://www.youtube.com/">Youtube</a></li>
+        <li><a href="https://www.Twitch.com/">Twitch</a></li>
+        <li><a href="https://www.google.com/">Google</a></li>
+        <li><a href="https://www.x.com/">X/Twitter</a></li>
+        <li><a href="https://grammarly.com/">Grammarly</a></li>
+    </ul>
+    <hr>
+    <h1>Justin's Classes</h1>
+    <h2>I'm only taking one class lol</h2>
+    <ul>
+        <li>Computing Foundations</li>
+    </ul>
+
+    <hr>
+    <h1>Play a Mini Game</h1>
+    <button onclick="startGame()">Start Guess the Number Game</button>
+    <hr>
+    <img src="pepe.jpg" alt="Funny Pepe Meme" style="max-width: 50%; height: auto;"> <!-- Added width and adjusted max-width -->
+</body>
+</html>
